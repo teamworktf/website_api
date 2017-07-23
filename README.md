@@ -7,8 +7,8 @@ This document holds all available developer functions that available to the publ
 You can request two type of image banners for any (populated) TF2 gameserver. The two formats are available at:
 
 ```
-https://teamwork.tf/community/quickplay/&lt;ip:port&gt;/550x125.png
-https://teamwork.tf/community/quickplay/&lt;ip:port&gt;/675x125.png
+https://teamwork.tf/community/quickplay/  ip:port  /550x125.png
+https://teamwork.tf/community/quickplay/  ip:port  /675x125.png
 ```
 
 **Example:**
@@ -20,7 +20,7 @@ https://teamwork.tf/community/quickplay/&lt;ip:port&gt;/675x125.png
 You can request the status of a server community through JSON. This information is available at:
 
 ```
-https://teamwork.tf/community/provider/&lt;provider slug&gt;.json
+https://teamwork.tf/community/provider/  provider-slug  .json
 ```
 
 **Example:**
