@@ -13,7 +13,7 @@ https://teamwork.tf/community/quickplay/  ip:port  /675x125.png
 
 **Example:**
 
-![](https://teamwork.tf/community/quickplay/74.91.127.172:27017/675x125.png)
+[![](https://teamwork.tf/community/quickplay/74.91.127.172:27017/675x125.png)](https://teamwork.tf/community/quickplay/74.91.127.172:27017/675x125.png)
 
 ## Server community information
 
@@ -24,6 +24,8 @@ https://teamwork.tf/community/provider/  provider-slug  .json
 ```
 
 **Example:**
+
+[https://teamwork.tf/community/provider/vaticancity.json](vaticancity)
 
 ```
 {
@@ -42,10 +44,12 @@ https://teamwork.tf/community/provider/  provider-slug  .json
 To retrieve additional statistics about the server community:
 
 ```
-https://teamwork.tf/community/provider/vaticancity/stats.json
+https://teamwork.tf/community/provider/  provider-slug  /stats.json
 ```
 
 **Example:**
+
+[https://teamwork.tf/community/provider/vaticancity/stats.json](vaticancity)
 
 ```
 {
