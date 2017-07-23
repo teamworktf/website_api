@@ -25,7 +25,7 @@ https://teamwork.tf/community/provider/  provider-slug  .json
 
 **Example:**
 
-[https://teamwork.tf/community/provider/vaticancity.json](vaticancity)
+[vaticancity](https://teamwork.tf/community/provider/vaticancity.json)
 
 ```
 {
@@ -49,7 +49,7 @@ https://teamwork.tf/community/provider/  provider-slug  /stats.json
 
 **Example:**
 
-[https://teamwork.tf/community/provider/vaticancity/stats.json](vaticancity)
+[vaticancity](https://teamwork.tf/community/provider/vaticancity/stats.json)
 
 ```
 {
