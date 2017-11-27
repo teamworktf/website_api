@@ -1,6 +1,6 @@
 # teamwork.tf public API
 
-This document holds all available developer functions that available to the public. Are you interested in additional information that we might be able to provide? Make sure to [contact](http://dev.teamwork.tf/about) us!
+This document holds all available developer functions that available to the public. Are you interested in additional information that we might be able to provide? Make sure to [contact](https://teamwork.tf/about) us!
 
 ## Banner image for gameservers
 
