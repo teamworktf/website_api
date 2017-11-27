@@ -492,7 +492,7 @@ Example result:
 
 #### Get a specific MyM lobby
 
-Get the status of a specific MyM lobby.
+Get the status of a specific MyM lobby. Status is either `ready`, `in-progress`, or `closed`
 
 ```
 https://teamwork.tf/api/v1/?key=YOUR_API_KEY
