@@ -221,22 +221,19 @@ https://teamwork.tf/api/v1/community/provider/{slug}/stats?key=YOUR_API_KEY
 Example result:
 ```json
 {
-    "players": 26,
+    "players": 604,
     "regions_with_players": {
-        "0": "Europe",
-        "2": "North America"
+        "Europe": 516,
+        "North America": 69,
+        "Oceania": 10,
+        "Asia": 9
     },
     "gamemodes": [
-        "breakout",
-        "cp-orange",
         "trading",
-        "achievement",
-        "payload-race",
-        "deathrun",
-        "versus-saxton-hale",
-        "ctf",
-        "slender"
-    ]
+        "mvm"
+    ],
+    "servers_online": 99,
+    "servers_total": 134
 }
 ```
 
@@ -435,18 +432,18 @@ https://teamwork.tf/api/v1/map-stats/mapimages/{map_name}?key=YOUR_API_KEY
 Example result:
 ```json
 {
-    "thumbnail": "http://dev.teamwork.tf/images/maps/official/ctf_2fort.jpg",
+    "thumbnail": "https://teamwork.tf/images/maps/official/ctf_2fort.jpg",
     "screenshots": [
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_0.jpg",
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_1.jpg",
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_2.jpg",
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_3.jpg",
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_4.jpg",
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_5.jpg",
-        "http://dev.teamwork.tf/images/map_context/ctf_2fort/spectator_6.jpg"
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_0.jpg",
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_1.jpg",
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_2.jpg",
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_3.jpg",
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_4.jpg",
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_5.jpg",
+        "https://teamwork.tf/images/map_context/ctf_2fort/spectator_6.jpg"
     ],
     "leveloverview": {
-        "image": "http://dev.teamwork.tf/images/map_context/ctf_2fort/overview_merged.jpg",
+        "image": "https://teamwork.tf/images/map_context/ctf_2fort/overview_merged.jpg",
         "context": [
             {
                 "screenHeight": 1080,
