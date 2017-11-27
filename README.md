@@ -25,6 +25,8 @@ For the following requests, you need an API key. This can be requested via [sett
 }
 ```
 
+Rate limit for JSON requests is max. 30 request a minute. If you exceed this limit, you will be banned for 10 minutes.
+
 ### V1: News
 
 #### overview
