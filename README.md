@@ -1,10 +1,10 @@
-# teamwork.tf public API
+# teamwork.tf API
 
-This document holds all available developer functions that available to the public. Are you interested in additional information that we might be able to provide? Make sure to [contact](https://teamwork.tf/about) us!
+This document describes all public endpoints that are available in the API. Are you interested in additional information that we might be able to provide? Make sure to [contact](https://teamwork.tf/about) us!
 
-## Banner image for gameservers
+## Banner image for gameservers (no API key required)
 
-You can request two type of image banners for any (populated) TF2 gameserver. The two formats are available at:
+You can use these images on your own website, to show information about a certain gameserver. These are available in two formats:
 
 ```
 https://teamwork.tf/community/quickplay/  ip:port  /550x125.png
@@ -13,9 +13,9 @@ https://teamwork.tf/community/quickplay/  ip:port  /675x125.png
 
 **Example:**
 
-[![](https://teamwork.tf/community/quickplay/74.91.127.172:27017/675x125.png)](https://teamwork.tf/community/quickplay/74.91.127.172:27017/675x125.png)
+[![](https://teamwork.tf/community/quickplay/91.216.250.10:27015/675x125.png)](https://teamwork.tf/community/quickplay/91.216.250.10:27015/675x125.png)
 
-## JSON requests (API key required)
+## JSON endpoints V1 (API key required)
 
 For the following requests, you need an API key. This can be requested via [settings](https://teamwork.tf/settings) under "optional settings". If an error occures you will receive the following JSON message:
 
@@ -25,13 +25,13 @@ For the following requests, you need an API key. This can be requested via [sett
 }
 ```
 
-Rate limit for JSON requests is max. 30 request a minute. If you exceed this limit, you will be banned for 10 minutes.
+**Our API has a rate limit of max 30 requests a minute. If you exceed this limit, your API key will be banned for 10 minutes. Please cache as much information as possible.**
 
-### V1: News
+### News
 
 #### overview
 
-Get an overview of the last 20 news items posted. All these news items are also displayed on the site at [news](https://teamwork.tf/news)
+Get an overview of the last 20 news items posted. All these news items are also displayed on the site at [news](https://teamwork.tf/news).
 
 ```
 https://teamwork.tf/api/v1/news?key=YOUR_API_KEY
@@ -92,13 +92,13 @@ Example result:
 }
 ```
 
-### V1: Community Quickplay
+### Community Quickplay
 
 Query specific information about community quickplay.
 
 #### List gamemodes
 
-List all gamemodes.
+List all gamemodes that is displayed on [community quickplay](https://teamwork.tf/community/quickplay).
 
 ```
 https://teamwork.tf/api/v1/quickplay?key=YOUR_API_KEY
@@ -147,7 +147,7 @@ Example result:
 }
 ```
 
-#### Get a list of servers that contain the gamemode
+#### Retrieve a list of gameservers that contain a gamemode
 
 List all gameservers from a specific gamemode (updated every 5 minutes).
 
@@ -165,7 +165,6 @@ Example result:
         "reachable": true,
         "provider": "skial",
         "valve_secure": true,
-        "sourcecbl_secure": false,
         "map_name": "ctf_turbine",
         "map_name_thumbnail": "/images/maps/official/ctf_turbine.jpg",
         "map_name_next": "",
@@ -184,9 +183,11 @@ Example result:
 ]
 ```
 
-### V1: Community Provider
+### Community Provider
 
-#### Get specific provider information
+Retrieve information about any of the community providers, as listed on the [provider overview](https://teamwork.tf/community/providers).
+
+#### Retrieve information from a community provider
 
 You can request the status of a server community.
 
@@ -210,9 +211,9 @@ Example result:
 }
 ```
 
-#### Get statistics about a community provider
+#### Retrieve statistics of a community provider
 
-Get live player statistics about a community provider (updated every 5 minutes).
+Get live player statistics about a community provider (updated every 5 minutes). Note that "servers_total" is the amount of servers that the provider added on our website, but "servers_online" is the amount of servers that we can actually reach.
 
 ```
 https://teamwork.tf/api/v1/community/provider/{slug}/stats?key=YOUR_API_KEY
@@ -274,9 +275,9 @@ Example result:
 ]
 ```
 
-### V1: Competitive Provider
+### Competitive Provider
 
-#### Get specific provider information
+#### Retrieve specific provider information
 
 Request a specific competitive provider.
 
@@ -295,7 +296,7 @@ Example result:
 }
 ```
 
-#### Get statistics from a provider
+#### Retrieve statistics from a competitive provider
 
 Get live statistics from a competitive provider (updated every 5 minutes).
 
@@ -315,7 +316,7 @@ Example result:
 }
 ```
 
-### V1: Map statistics
+### Map thumbnails & statistics
 
 #### Search for a specific map
 
@@ -340,7 +341,11 @@ Example result:
 
 #### Get a specific map-stats
 
-Retrieve map statistics about a certain map (updated every 5 minutes). Note that the context field can be null, as we have no additional information about all maps.
+Retrieve map statistics about a certain map (updated every 5 minutes). 
+
+* Context field can be NULL, as we do not always have screenshots for every gamemap.
+* First seen field can be NULL, as we only track gamemaps since 2017 (and a lot of maps existed before that time)
+* normalized_map_name is the map name, minus any version number (e.g. ctf_2fort_b2 becomes ctf_2fort)
 
 ```
 https://teamwork.tf/api/v1/map-stats/map/{map_name}?key=YOUR_API_KEY
@@ -423,7 +428,7 @@ Example result:
 
 #### Get image context for a map
 
-Get a list of images about the map. Depending on the data that we have some field might be empty.
+Get a list of images about the map. Depending on the map, the fields "screenshots" and "leveloverview" might be null.
 
 ```
 https://teamwork.tf/api/v1/map-stats/mapimages/{map_name}?key=YOUR_API_KEY
@@ -460,9 +465,11 @@ Example result:
 }
 ```
 
-### V1: Meet your Map lobbies
+### Meet your Map lobbies
 
-#### Get list of lobbies
+Meet your map, is a lobby system on the teamwork.tf website. This lobby system is currently hidden from the public, as this is still in beta.
+
+#### List lobbies
 
 List all lobbies in MyM.
 
@@ -494,7 +501,7 @@ Example result:
 Get the status of a specific MyM lobby. Status is either `ready`, `in-progress`, or `closed`
 
 ```
-https://teamwork.tf/api/v1/?key=YOUR_API_KEY
+https://teamwork.tf/api/v1/meet-your-map/{id}?key=YOUR_API_KEY
 ```
 
 Example result:
