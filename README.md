@@ -1,10 +1,8 @@
-# teamwork.tf API
+This document describes all public endpoints that are available in the **teamwork.tf API**. Are you interested in additional information that we might be able to provide? Make sure to [contact](https://teamwork.tf/about) us!
 
-This document describes all public endpoints that are available in the API. Are you interested in additional information that we might be able to provide? Make sure to [contact](https://teamwork.tf/about) us!
+# Gameserver banner (no API key required)
 
-## Banner image for gameservers (no API key required)
-
-You can use these images on your own website, to show information about a certain gameserver. These are available in two formats:
+You can use these images on your own website, to show information about a certain gameserver. These are available in two sizes:
 
 ```
 https://teamwork.tf/community/quickplay/  ip:port  /550x125.png
@@ -15,7 +13,9 @@ https://teamwork.tf/community/quickplay/  ip:port  /675x125.png
 
 [![](https://teamwork.tf/community/quickplay/91.216.250.10:27015/675x125.png)](https://teamwork.tf/community/quickplay/91.216.250.10:27015/675x125.png)
 
-## JSON endpoints V1 (API key required)
+# JSON endpoints V1 (API key required)
+
+## Prerequisites
 
 For the following requests, you need an API key. This can be requested via [settings](https://teamwork.tf/settings) under "optional settings". If an error occures you will receive the following JSON message:
 
@@ -25,20 +25,24 @@ For the following requests, you need an API key. This can be requested via [sett
 }
 ```
 
-**Our API has a rate limit of max 30 requests a minute. If you exceed this limit, your API key will be banned for 10 minutes. Please cache as much information as possible.**
+## Rate limit
 
-Endpoint index
+Our API has a rate limit of max 30 requests a minute. If you exceed this limit, your API key will be banned for 10 minutes.
 
-* [News](#News)
-* [Community Quickplay](#)
-* [Community Provider](#)
-* [Competitive Provider](#)
-* [Map thumbnails & Statisitics](#)
-* [Meet your Map lobbies](#)
+## Endpoint overview
 
-### News
+Index:
 
-#### overview
+* [News](#news)
+* [Community Quickplay](#community-quickplay)
+* [Community Provider](#community-provider)
+* [Competitive Provider](#competitive-provider)
+* [Map thumbnails & Statisitics](#map-thumbnails--statistics)
+* [Meet your Map lobbies](#meet-your-map-lobbies)
+
+## News
+
+### List latest articles
 
 Get an overview of the last 20 news items posted. All these news items are also displayed on the site at [news](https://teamwork.tf/news).
 
@@ -77,7 +81,7 @@ Example result:
 ]
 ```
 
-#### specific article
+### Retrieve specific article
 
 Get a specific news article.
 
@@ -101,11 +105,11 @@ Example result:
 }
 ```
 
-### Community Quickplay
+## Community Quickplay
 
 Query specific information about community quickplay.
 
-#### List gamemodes
+### List gamemodes
 
 List all gamemodes that is displayed on [community quickplay](https://teamwork.tf/community/quickplay).
 
@@ -137,7 +141,7 @@ Example result:
 }
 ```
 
-#### Get a specific gamemode
+### Get a specific gamemode
 
 Get a specific gamemode based on the `{gamemode}` identifier (updated every 5 minutes).
 
@@ -156,7 +160,7 @@ Example result:
 }
 ```
 
-#### Retrieve a list of gameservers that contain a gamemode
+### Retrieve a list of gameservers that contain a gamemode
 
 List all gameservers from a specific gamemode (updated every 5 minutes).
 
@@ -192,11 +196,11 @@ Example result:
 ]
 ```
 
-### Community Provider
+## Community Provider
 
 Retrieve information about any of the community providers, as listed on the [provider overview](https://teamwork.tf/community/providers).
 
-#### Retrieve information from a community provider
+### Retrieve information from a community provider
 
 You can request the status of a server community.
 
@@ -220,7 +224,7 @@ Example result:
 }
 ```
 
-#### Retrieve statistics of a community provider
+### Retrieve statistics of a community provider
 
 Get live player statistics about a community provider (updated every 5 minutes). Note that "servers_total" is the amount of servers that the provider added on our website, but "servers_online" is the amount of servers that we can actually reach.
 
@@ -247,7 +251,7 @@ Example result:
 }
 ```
 
-#### Get serverlist from a community provider
+### Get serverlist from a community provider
 
 Get live serverlist from a community provider (updated every 5 minutes).
 
@@ -284,9 +288,9 @@ Example result:
 ]
 ```
 
-### Competitive Provider
+## Competitive Provider
 
-#### Retrieve specific provider information
+### Retrieve specific provider information
 
 Request a specific competitive provider.
 
@@ -305,7 +309,7 @@ Example result:
 }
 ```
 
-#### Retrieve statistics from a competitive provider
+### Retrieve statistics from a competitive provider
 
 Get live statistics from a competitive provider (updated every 5 minutes).
 
@@ -325,9 +329,9 @@ Example result:
 }
 ```
 
-### Map thumbnails & statistics
+## Map thumbnails & statistics
 
-#### Search for a specific map
+### Search for a specific map
 
 Search for a specific map that is being played in TF2. Lists up to 50 results, so be specific in your search.
 
@@ -348,7 +352,7 @@ Example result:
 ]
 ```
 
-#### Get a specific map-stats
+### Get a specific map-stats
 
 Retrieve map statistics about a certain map (updated every 5 minutes). 
 
@@ -420,7 +424,7 @@ Example result:
 }
 ```
 
-#### Get an image thumbnail for a map
+### Get an image thumbnail for a map
 
 Get an thumbnail URL for a given map. Note that image size/format depends on the source of the thumbnail. As a rule of thumb, you can expect the image size to be at least 512x286 pixels. If you query for an unknown map, or a map without a thumbnail we will respond with an error JSON object (as shown above).
 
@@ -435,7 +439,7 @@ Example result:
 }
 ```
 
-#### Get image context for a map
+### Get image context for a map
 
 Get a list of images about the map. Depending on the map, the fields "screenshots" and "leveloverview" might be null.
 
@@ -474,11 +478,11 @@ Example result:
 }
 ```
 
-### Meet your Map lobbies
+## Meet your Map lobbies
 
 Meet your map, is a lobby system on the teamwork.tf website. This lobby system is currently hidden from the public, as this is still in beta.
 
-#### List lobbies
+### List lobbies
 
 List all lobbies in MyM.
 
@@ -505,7 +509,7 @@ Example result:
 ]
 ```
 
-#### Get a specific MyM lobby
+### Get a specific MyM lobby
 
 Get the status of a specific MyM lobby. Status is either `ready`, `in-progress`, or `closed`
 
