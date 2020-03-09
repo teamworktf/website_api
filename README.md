@@ -27,6 +27,15 @@ For the following requests, you need an API key. This can be requested via [sett
 
 **Our API has a rate limit of max 30 requests a minute. If you exceed this limit, your API key will be banned for 10 minutes. Please cache as much information as possible.**
 
+Endpoint index
+
+* [News](#News)
+* [Community Quickplay](#)
+* [Community Provider](#)
+* [Competitive Provider](#)
+* [Map thumbnails & Statisitics](#)
+* [Meet your Map lobbies](#)
+
 ### News
 
 #### overview
