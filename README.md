@@ -31,13 +31,12 @@ Our API has a rate limit of max 30 requests a minute. If you exceed this limit, 
 
 ## Endpoint overview
 
-Index:
-
 * [News](#news)
 * [Community Quickplay](#community-quickplay)
 * [Community Provider](#community-provider)
 * [Competitive Provider](#competitive-provider)
 * [Map thumbnails & Statisitics](#map-thumbnails--statistics)
+* [Custom serverlists](#custom-serverlists)
 * [Meet your Map lobbies](#meet-your-map-lobbies)
 
 ## News
@@ -476,6 +475,57 @@ Example result:
         ]
     }
 }
+```
+
+## Custom serverlists
+
+Custom serverlists are lists of gameservers filtered by the community, as shown on the [custom serverlists page](https://teamwork.tf/community/customserverlists).
+
+
+### Overview
+```
+https://teamwork.tf/api/v1/customserverlist/?key=YOUR_API_KEY
+```
+
+Example result:
+```json
+[
+{      
+   "id":1,
+   "name":"x100 servers",
+   "description":"x100 is 10 times more of a clusterfuck than x10!",
+   "description_large":"<p>This serverlist contains all the x100 servers out there which are being played on. Enjoy!<\/p>",
+   "creator":{
+      "id":76561198266675080,
+      "name":"teamwork.tf"  
+   },
+   "subscribed":16,
+   "filters":{
+      "filter_hostname_whitelist":[
+         "x100"
+      ],
+      "filter_hostname_blacklist":[
+         "x1000" 
+      ]   
+   } 
+},
+...
+]
+```
+Note that many different kind of filters exist. You can play around with the API to find all filters.
+
+### Retrieve a specific serverlist
+
+```
+https://teamwork.tf/api/v1/customserverlist/{id}?key=YOUR_API_KEY
+```
+
+For a result look at the example above (overview).
+
+### Retrieve the servers from a specific serverlist
+
+```
+https://teamwork.tf/api/v1/customserverlist/{id}/servers?key=YOUR_API_KEY
 ```
 
 ## Meet your Map lobbies
