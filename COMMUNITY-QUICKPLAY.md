@@ -86,7 +86,10 @@ https://teamwork.tf/api/v1/quickplay/{gamemode}/servers?key=YOUR_API_KEY
 
 # Retrieve information about a gameserver
 
-Retrieve information from a TF2 gameserver based on the IP and PORT (updated every 5 minutes). Note that we only process community gameservers that have at least one player in them. So you cannot query for Valve gameservers, or empty gameservers.
+Retrieve information from a TF2 gameserver based on the IP and PORT (updated every 5 minutes). Note the following:
+
+* community quickplay only holds information about **community** gameservers (so you cannot query for Valve servers).
+* community quickplay only holds information about gameservers that have at least one player in them, or are listed at their resprective community provider.
 
 When you leave out the PORT parameter, you will get all the gameservers from that IP adress. This is why this endpoint will always return an array instead of an object. If no gameserver is found, this array will be empty.
 
