@@ -4,10 +4,10 @@ Retrieve information about creators from Teamwork.tf. [Prerequistes for using th
 
 ## Find YouTube creator based on SteamID
 
-Search for a specific map that is being played in TF2. Lists up to 50 results, so be specific in your search.
+Search for a specific YouTube creator that is [listed on our website](https://teamwork.tf/creators/explore) based on their Steam ID64:
 
 ```
-https://teamwork.tf/api/v1/map-stats/search?search_term={search}&key=YOUR_API_KEY
+https://teamwork.tf/api/v1/youtube-creator/steamid/{steamid}?key=YOUR_API_KEY
 ```
 
 Example result:
