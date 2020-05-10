@@ -19,6 +19,7 @@ Our API has a rate limit of max 30 requests a minute. If you exceed this limit, 
 ## Endpoint overview
 
 * [News](/NEWS.md)  *(news from various sources about Team Fortress 2)*
+* [Creators](/CREATORS.md)  *(YouTube creators, Gamemap creators)*
 * [Community Gameservers](/COMMUNITY-QUICKPLAY.md) *(gameservers, gamemodes, providers and statistics about players)*
 * [Gamemap thumbnails & Statistics](/GAMEMAPS.md) *(gamemap thumbnails, images and statistics about players)*
 
