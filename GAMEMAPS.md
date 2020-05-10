@@ -1,0 +1,1 @@
+# Gamemap thumbnails & information
