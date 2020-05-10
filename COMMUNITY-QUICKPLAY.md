@@ -10,7 +10,7 @@ List all gamemodes that are displayed on [community quickplay](https://teamwork.
 https://teamwork.tf/api/v1/quickplay?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
     "gamemodes_official": [
@@ -39,7 +39,7 @@ Get a specific gamemode based on the `{gamemode}` identifier (updated every 5 mi
 https://teamwork.tf/api/v1/quickplay/{gamemode}?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
     "id": "ctf",
@@ -58,7 +58,7 @@ List all gameservers from a specific gamemode (updated every 5 minutes).
 https://teamwork.tf/api/v1/quickplay/{gamemode}/servers?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *array*
 ```json
 [
     {
@@ -94,7 +94,7 @@ When you leave out the PORT parameter, you will get all the gameservers from tha
 https://teamwork.tf/api/v1/quickplay/server?ip=IP&port=PORT&key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *array*
 ```json
 [
    {
@@ -135,7 +135,7 @@ You can request the status of a server community.
 https://teamwork.tf/api/v1/community/provider/{slug}?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
     "id": "vaticancity",
@@ -158,7 +158,7 @@ Get live player statistics about a community provider (updated every 5 minutes).
 https://teamwork.tf/api/v1/community/provider/{slug}/stats?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
     "players": 604,
@@ -185,7 +185,7 @@ Get the list of gameservers we can reach from a community provider (updated ever
 https://teamwork.tf/api/v1/community/provider/{slug}/servers?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *array*
 ```json
 [
     {
@@ -221,7 +221,7 @@ Request a specific competitive provider.
 https://teamwork.tf/api/v1/competitive/provider/{provider}?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
     "id": "ugc",
@@ -240,7 +240,7 @@ Get live statistics from a competitive provider (updated every 5 minutes).
 https://teamwork.tf/api/v1/competitive/provider/{provider}/stats?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
     "id": 1047757,
@@ -262,7 +262,7 @@ Custom serverlists are lists of gameservers filtered by the community, as shown 
 https://teamwork.tf/api/v1/customserverlist/?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *array*
 ```json
 [
 {      
@@ -293,7 +293,7 @@ Note that many different kind of filters exist. You can play around with the API
 ```
 https://teamwork.tf/api/v1/customserverlist/{id}?key=YOUR_API_KEY
 ```
-**Example result:**
+**Example result:** *object*
 See the section above. It will present the same custum serverlist.
 
 ## Retrieve the gameservers from a specific serverlist
@@ -301,5 +301,7 @@ See the section above. It will present the same custum serverlist.
 ```
 https://teamwork.tf/api/v1/customserverlist/{id}/servers?key=YOUR_API_KEY
 ```
+
+**Example result:** *array*
 
 Retrieve a list of gameservers that are in this serverlist. See [this as an example](#user-content-retrieve-a-list-of-gameservers-that-contain-a-gamemode).
