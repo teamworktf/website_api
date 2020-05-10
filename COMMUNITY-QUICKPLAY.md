@@ -26,10 +26,9 @@ Example result:
             "desc": "Steal the enemy's intelligence and get it back to your base!",
             "color": "329a9d"
         },
-        ...
     ],
     "gamemodes_community": [
-        ...
+
     ]
 }
 ```
