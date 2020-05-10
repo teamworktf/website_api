@@ -71,7 +71,6 @@ Example result:
         "provider": "skial",
         "valve_secure": true,
         "map_name": "ctf_turbine",
-        "map_name_thumbnail": "/images/maps/official/ctf_turbine.jpg",
         "map_name_next": "",
         "max_players": 32,
         "gamemodes": [
@@ -108,7 +107,6 @@ Example result:
       "provider":"creatorstf",
       "valve_secure":true,
       "map_name":"pl_fifthcurve_rc1",
-      "map_name_thumbnail":"\/images\/maps\/pl_fifthcurve.jpg",
       "map_name_next":"pl_badwater",
       "players":22,
       "max_players":24,
@@ -126,6 +124,7 @@ Example result:
 ]
 ```
 
+To get the thumbnail of an map, please use the [gamemap thumbnail endpoint](/GAMEMAPS.md#get-an-image-thumbnail-for-a-map).
 
 # Community Provider
 
@@ -201,7 +200,6 @@ Example result:
         "provider": "wondertf",
         "valve_secure": true,
         "map_name": "jail_minecraft_dynf_v10d",
-        "map_name_thumbnail": null,
         "map_name_next": "ba_space_jail_v7",
         "max_players": 33,
         "gamemodes": [
