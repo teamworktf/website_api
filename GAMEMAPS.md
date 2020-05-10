@@ -10,7 +10,7 @@ Search for a specific map that is being played in TF2. Lists up to 50 results, s
 https://teamwork.tf/api/v1/map-stats/search?search_term={search}&key=YOUR_API_KEY
 ```
 
-Example result:
+**Example result:** *array*
 ```json
 [
     {
@@ -34,7 +34,7 @@ Retrieve map statistics about a certain map (updated every 5 minutes).
 https://teamwork.tf/api/v1/map-stats/map/{map_name}?key=YOUR_API_KEY
 ```
 
-Example result:
+**Example result:** *object*
 ```json
 {
     "map": "ctf_2fort",
@@ -102,7 +102,7 @@ Get an thumbnail URL for a given map. Note that image size/format depends on the
 https://teamwork.tf/api/v1/map-stats/mapthumbnail/{map_name}?key=YOUR_API_KEY
 ```
 
-Example result:
+**Example result:** *object*
 ```json
 {
     "thumbnail": "https://teamwork.tf/images/maps/official/ctf_2fort.jpg"
@@ -117,7 +117,7 @@ Get a list of images about the map. Depending on the map, the fields "screenshot
 https://teamwork.tf/api/v1/map-stats/mapimages/{map_name}?key=YOUR_API_KEY
 ```
 
-Example result:
+**Example result:** *object*
 ```json
 {
     "thumbnail": "https://teamwork.tf/images/maps/official/ctf_2fort.jpg",
