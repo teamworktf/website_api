@@ -39,3 +39,15 @@ Search for a specific Gamemap creator that is listed on our website based on the
 ```
 https://teamwork.tf/api/v1/map-creator/steamid/{steamid}?key=YOUR_API_KEY
 ```
+
+This will return a list of associations to a gamemap. A gamemap association can be based on the full map name (e.g. `dr_bank_v12` or the normalized map name `dr_bank` (a normalized map name is without any version number or alteration of the base map).
+
+**Example result:** *array*
+```json
+[
+    {
+      "map_name":null,
+      "normalized_map_name":"vsh_dr_bank"
+    }
+]
+```
