@@ -26,9 +26,10 @@ https://teamwork.tf/api/v1/map-stats/search?search_term={search}&key=YOUR_API_KE
 
 Retrieve map statistics about a certain map (updated every 5 minutes). 
 
-* Context field can be NULL, as we do not always have screenshots for every gamemap.
+* Context object can be NULL, as we do not always have screenshots for every gamemap.
+* Extra_info object can be NULL, as we do not always have this information in our database.
 * First seen field can be NULL, as we only track gamemaps since 2017 (and a lot of maps existed before that time)
-* normalized_map_name is the map name, minus any version number (e.g. `ctf_2fort_b2` becomes `ctf_2fort`)
+* `normalized_map_name` is the map name, minus any version number (e.g. `ctf_2fort_b2` becomes `ctf_2fort`)
 
 ```
 https://teamwork.tf/api/v1/map-stats/map/{map_name}?key=YOUR_API_KEY
