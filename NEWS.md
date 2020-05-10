@@ -1,6 +1,6 @@
 # News articles from Team Fortress 2
 
-These endpoints require an [API key](https://github.com/teamworktf/website_api) from teamwork.tf.
+[Prerequistes for using this API](https://github.com/teamworktf/website_api).
 
 ## List latest articles
 
