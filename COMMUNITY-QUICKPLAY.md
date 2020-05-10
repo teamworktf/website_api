@@ -81,7 +81,6 @@ https://teamwork.tf/api/v1/quickplay/{gamemode}/servers?key=YOUR_API_KEY
         "has_norespawntime": true,
         "has_alltalk": true
     },
-    ...
 ]
 ```
 
@@ -97,7 +96,8 @@ https://teamwork.tf/api/v1/quickplay/server?ip=IP&port=PORT&key=YOUR_API_KEY
 
 **Example result:**
 ```json
-[   {
+[
+   {
       "ip":"164.132.233.16",
       "port":"27022",
       "name":"Creators.TF | Strasbourg (West Europe) | #108",
@@ -117,8 +117,7 @@ https://teamwork.tf/api/v1/quickplay/server?ip=IP&port=PORT&key=YOUR_API_KEY
       "has_randomcrits":false,
       "has_norespawntime":false,
       "has_alltalk":false
-   
-}
+   }
 ]
 ```
 
@@ -209,7 +208,6 @@ https://teamwork.tf/api/v1/community/provider/{slug}/servers?key=YOUR_API_KEY
         "has_norespawntime": true,
         "has_alltalk": true
     },
-    ...
 ]
 ```
 
@@ -286,7 +284,6 @@ https://teamwork.tf/api/v1/customserverlist/?key=YOUR_API_KEY
       ]   
    } 
 },
-...
 ]
 ```
 Note that many different kind of filters exist. You can play around with the API to find all filters.
