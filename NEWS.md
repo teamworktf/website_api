@@ -10,7 +10,7 @@ Get an overview of the last 20 news items posted. All these news items are also 
 https://teamwork.tf/api/v1/news?key=YOUR_API_KEY
 ```
 
-Pagination is also supported, you can use the `&page=2` to request older articles.
+Pagination is also supported, you can append `&page=2` to the URL to request older articles.
 
 Example result:
 ```json
