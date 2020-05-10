@@ -1,8 +1,8 @@
 # Community Quickplay
 
-[Prerequistes for using this API](https://github.com/teamworktf/website_api).
+Retrieve information about (community) gameservers within Team Fortress 2. [Prerequistes for using this API](https://github.com/teamworktf/website_api).
 
-### List gamemodes
+# List gamemodes
 
 List all gamemodes that is displayed on [community quickplay](https://teamwork.tf/community/quickplay).
 
@@ -53,7 +53,7 @@ Example result:
 }
 ```
 
-### Retrieve a list of gameservers that contain a gamemode
+# Retrieve a list of gameservers that contain a gamemode
 
 List all gameservers from a specific gamemode (updated every 5 minutes).
 
@@ -89,11 +89,11 @@ Example result:
 ]
 ```
 
-## Community Provider
+# Community Provider
 
 Retrieve information about any of the community providers, as listed on the [provider overview](https://teamwork.tf/community/providers).
 
-### Retrieve information from a community provider
+## Retrieve information from a community provider
 
 You can request the status of a server community.
 
@@ -117,7 +117,7 @@ Example result:
 }
 ```
 
-### Retrieve statistics of a community provider
+## Retrieve statistics of a community provider
 
 Get live player statistics about a community provider (updated every 5 minutes). Note that "servers_total" is the amount of servers that the provider added on our website, but "servers_online" is the amount of servers that we can actually reach.
 
@@ -144,7 +144,7 @@ Example result:
 }
 ```
 
-### Get serverlist from a community provider
+## Get serverlist from a community provider
 
 Get live serverlist from a community provider (updated every 5 minutes).
 
@@ -181,9 +181,9 @@ Example result:
 ]
 ```
 
-## Competitive Provider
+# Competitive Provider
 
-### Retrieve specific provider information
+## Retrieve specific provider information
 
 Request a specific competitive provider.
 
@@ -202,7 +202,7 @@ Example result:
 }
 ```
 
-### Retrieve statistics from a competitive provider
+## Retrieve statistics from a competitive provider
 
 Get live statistics from a competitive provider (updated every 5 minutes).
 
