@@ -96,7 +96,7 @@ Example result:
 
 ### Get an image thumbnail for a map
 
-Get an thumbnail URL for a given map. Note that image size/format depends on the source of the thumbnail. As a rule of thumb, you can expect the image size to be at least 512x286 pixels. If you query for an unknown map, or a map without a thumbnail we will respond with an error JSON object (as shown above).
+Get an thumbnail URL for a given map. Note that image size/format depends on the source of the thumbnail. As a rule of thumb, you can expect the image size to be at least 512x286 pixels. If you query for an unknown map, or a map without a thumbnail we will respond with an error JSON object (as shown above). The image format is either PNG or JPG.
 
 ```
 https://teamwork.tf/api/v1/map-stats/mapthumbnail/{map_name}?key=YOUR_API_KEY
