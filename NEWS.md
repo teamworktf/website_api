@@ -14,7 +14,7 @@ Pagination is also supported, you can append `&page=2` to the URL to request old
 
 Searching for specific news providers is also possible, you can append `&provider=NAME` to the URL to request only articles from this provider. For a list of all providers, please view the [news](https://teamwork.tf/news) page.
 
-**Example result:**
+**Example result:** *array*
 ```json
 [
     {
@@ -52,7 +52,7 @@ Get a specific news article. Note that we do not store the contents of a news ar
 https://teamwork.tf/api/v1/news/hash/{hash}?key=YOUR_API_KEY
 ```
 
-**Example result:**
+**Example result:** *object*
 ```json
 {
         "hash": "64d9be7afb4fcc3db8c7945fa2afdf1a",
