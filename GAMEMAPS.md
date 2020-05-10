@@ -60,6 +60,13 @@ https://teamwork.tf/api/v1/map-stats/map/{map_name}?key=YOUR_API_KEY
         "ctf_2fort_freak",
         "ctf_2fort_classic_space_bd2"
     ],
+    "extra_info": {
+        "description": "DESCRIPTION IN MARKUP LANGUAGE",
+        "steam_workshop_link": "https://steamcommunity.com/sharedfiles/filedetails/?id=454129715",
+        "tf2maps_link": "https://tf2maps.net/downloads/dr_bank.751/",
+        "gamebanana_link": "https://gamebanana.com/maps/182962",
+        "bsp_link": null
+        },
     "context": {
         "normalized_map_name": "ctf_2fort",
         "created_at": {
