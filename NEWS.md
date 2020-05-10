@@ -1,6 +1,6 @@
-# News articles from Team Fortress 2
+# News articles from Team Fortress 2 websites
 
-[Prerequistes for using this API](https://github.com/teamworktf/website_api).
+Retrieve news articles from Team Fortress 2 related websites. [Prerequistes for using this API](https://github.com/teamworktf/website_api).
 
 ## List latest articles
 
@@ -9,6 +9,8 @@ Get an overview of the last 20 news items posted. All these news items are also 
 ```
 https://teamwork.tf/api/v1/news?key=YOUR_API_KEY
 ```
+
+Pagination is also supported, you can use the `&page=2` to request older articles.
 
 Example result:
 ```json
@@ -37,13 +39,12 @@ Example result:
             "timezone": "CET"
         }
     },
-    ...
 ]
 ```
 
 ## Retrieve specific article
 
-Get a specific news article.
+Get a specific news article. Note that we do not store the contents of a news article.
 
 ```
 https://teamwork.tf/api/v1/news/hash/{hash}?key=YOUR_API_KEY
