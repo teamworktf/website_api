@@ -10,7 +10,9 @@ Search for a specific YouTube creator that is [listed on our website](https://te
 https://teamwork.tf/api/v1/youtube-creator/steamid/{steamid}?key=YOUR_API_KEY
 ```
 
-Example result:
+This endpoint can return multiple accounts, as multiple YouTube creator accounts can be associated to the same Steam profile. Besides the `id`, `link`, `name`, `youtube_acc` and `steam_acc` fields, all are optional and can be NULL.
+
+**Example result:** *array*
 ```json
 [   
     {
@@ -28,4 +30,12 @@ Example result:
       "thumbnail_url":"https:\/\/yt3.ggpht.com\/a\/AATXAJzb4uh4Y26WY4032c7u4AZ6x4r4Z022n6J2fA=s240-c-k-c0xffffffff-no-rj-mo"
    }
 ]
+```
+
+## Find Gamemap creator based on SteamID
+
+Search for a specific Gamemap creator that is listed on our website based on their Steam ID64:
+
+```
+https://teamwork.tf/api/v1/map-creator/steamid/{steamid}?key=YOUR_API_KEY
 ```
