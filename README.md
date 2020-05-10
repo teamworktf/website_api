@@ -1,6 +1,6 @@
-In case you see information on our website that you would like to access via our API, please create an issue for this.
+# Teamwork.tf JSON API (for information about Team Fortress 2)
 
-# Using our JSON API
+In case you see information on our website that you would like to access via our API, please create an issue for this.
 
 ## Prerequisites
 
@@ -18,10 +18,10 @@ Our API has a rate limit of max 30 requests a minute. If you exceed this limit, 
 
 ## Endpoint overview
 
-* [News](#news)
-* [Community Quickplay](#community-quickplay)
-* [Community Provider](#community-provider)
-* [Competitive Provider](#competitive-provider)
-* [Map thumbnails & Statisitics](#map-thumbnails--statistics)
-* [Custom serverlists](#custom-serverlists)
+* [News](/teamworktf/website_api/blob/master/NEWS.md)  *(news from various sources about Team Fortress 2)*
+* [Community Gameservers](/teamworktf/website_api/blob/master/COMMUNITY-QUICKPLAY.md) *(gameservers, gamemodes, providers and statistics about players)*
+* [Map thumbnails & Statisitics](#map-thumbnails--statistics) *(gamemap thumbnails, images and statistics about players)*
 
+Other information sources:
+
+* [Server image banner](/teamworktf/website_api/blob/master/BANNER.md) *(embeddable images with gameserver information)*
