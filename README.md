@@ -14,7 +14,7 @@ For all JSON requests you need an API key. This can be requested via [settings](
 
 ## Rate limit
 
-Our API has a rate limit of max 30 requests a minute. If you exceed this limit, your API key will be banned for 10 minutes.
+The API has a rate limit of max 30 requests a minute. If you exceed this limit, your API key will be banned for 10 minutes.
 
 ## Endpoint overview
 
