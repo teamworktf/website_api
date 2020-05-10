@@ -1,6 +1,6 @@
 # Gamemap thumbnails & information
 
-Retrieve information about gamemaps within Team Fortress 2.
+Retrieve information about gamemaps within Team Fortress 2. [Prerequistes for using this API](https://github.com/teamworktf/website_api).
 
 ### Search for a specific map
 
@@ -19,7 +19,6 @@ Example result:
     {
         "map_name": "plr_hightower"
     },
-    ...
 ]
 ```
 
