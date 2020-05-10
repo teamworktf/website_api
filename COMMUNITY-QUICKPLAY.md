@@ -4,7 +4,7 @@ Retrieve information about (community) gameservers within Team Fortress 2. [Prer
 
 # List gamemodes
 
-List all gamemodes that is displayed on [community quickplay](https://teamwork.tf/community/quickplay).
+List all gamemodes that are displayed on [community quickplay](https://teamwork.tf/community/quickplay).
 
 ```
 https://teamwork.tf/api/v1/quickplay?key=YOUR_API_KEY
@@ -36,7 +36,7 @@ Example result:
 
 ### Get a specific gamemode
 
-Get a specific gamemode based on the `{gamemode}` identifier (updated every 5 minutes).
+Get a specific gamemode based on the `{gamemode}` identifier (updated every 5 minutes). This contains how many players are currently playing in this gamemode.
 
 ```
 https://teamwork.tf/api/v1/quickplay/{gamemode}?key=YOUR_API_KEY
@@ -89,6 +89,45 @@ Example result:
 ]
 ```
 
+# Retrieve information from a gameserver
+
+Retrieve information from a TF2 gameserver based on the IP and PORT (updated every 5 minutes). Note that we only process community gameservers that have at least one player in them. So you cannot query for Valve gameservers, or empty gameservers.
+
+When you leave out the PORT parameter, you will get all the gameservers from that IP adress.
+
+```
+https://teamwork.tf/api/v1/quickplay/server?ip=IP&port=PORT&key=YOUR_API_KEY
+```
+
+Example result:
+```json
+[   {
+      "ip":"164.132.233.16",
+      "port":"27022",
+      "name":"Creators.TF | Strasbourg (West Europe) | #108",
+      "reachable":true,
+      "provider":"creatorstf",
+      "valve_secure":true,
+      "map_name":"pl_fifthcurve_rc1",
+      "map_name_thumbnail":"\/images\/maps\/pl_fifthcurve.jpg",
+      "map_name_next":"pl_badwater",
+      "players":22,
+      "max_players":24,
+      "gamemodes":[
+         "payload"
+      ],
+      "gametype":"payload,nocrits,creators,quickplay",
+      "has_password":false,
+      "has_rtd":false,
+      "has_randomcrits":false,
+      "has_norespawntime":false,
+      "has_alltalk":false
+   
+}
+]
+```
+
+
 # Community Provider
 
 Retrieve information about any of the community providers, as listed on the [provider overview](https://teamwork.tf/community/providers).
@@ -119,7 +158,7 @@ Example result:
 
 ## Retrieve statistics of a community provider
 
-Get live player statistics about a community provider (updated every 5 minutes). Note that "servers_total" is the amount of servers that the provider added on our website, but "servers_online" is the amount of servers that we can actually reach.
+Get live player statistics about a community provider (updated every 5 minutes). Note that "servers_total" is the amount of servers that the provider added on our website, but "servers_online" is the amount of servers that we can actually communicate with.
 
 ```
 https://teamwork.tf/api/v1/community/provider/{slug}/stats?key=YOUR_API_KEY
@@ -146,7 +185,7 @@ Example result:
 
 ## Get serverlist from a community provider
 
-Get live serverlist from a community provider (updated every 5 minutes).
+Get the list of gameservers we can reach from a community provider (updated every 5 minutes).
 
 ```
 https://teamwork.tf/api/v1/community/provider/{slug}/servers?key=YOUR_API_KEY
@@ -162,7 +201,6 @@ Example result:
         "reachable": true,
         "provider": "wondertf",
         "valve_secure": true,
-        "sourcecbl_secure": false,
         "map_name": "jail_minecraft_dynf_v10d",
         "map_name_thumbnail": null,
         "map_name_next": "ba_space_jail_v7",
@@ -267,7 +305,7 @@ https://teamwork.tf/api/v1/customserverlist/{id}?key=YOUR_API_KEY
 
 For a result look at the example above (overview).
 
-## Retrieve the servers from a specific serverlist
+## Retrieve the gameservers from a specific serverlist
 
 ```
 https://teamwork.tf/api/v1/customserverlist/{id}/servers?key=YOUR_API_KEY
