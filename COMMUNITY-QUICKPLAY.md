@@ -84,11 +84,11 @@ https://teamwork.tf/api/v1/quickplay/{gamemode}/servers?key=YOUR_API_KEY
 ]
 ```
 
-# Retrieve information from a gameserver
+# Retrieve information about a gameserver
 
 Retrieve information from a TF2 gameserver based on the IP and PORT (updated every 5 minutes). Note that we only process community gameservers that have at least one player in them. So you cannot query for Valve gameservers, or empty gameservers.
 
-When you leave out the PORT parameter, you will get all the gameservers from that IP adress.
+When you leave out the PORT parameter, you will get all the gameservers from that IP adress. This is why this endpoint will always return an array instead of an object. If no gameserver is found, this array will be empty.
 
 ```
 https://teamwork.tf/api/v1/quickplay/server?ip=IP&port=PORT&key=YOUR_API_KEY
@@ -127,7 +127,7 @@ To get the thumbnail of an map, please use the [gamemap thumbnail endpoint](/GAM
 
 Retrieve information about any of the community providers, as listed on the [provider overview](https://teamwork.tf/community/providers).
 
-## Retrieve information from a community provider
+## Retrieve information about a community provider
 
 You can request the status of a server community.
 
