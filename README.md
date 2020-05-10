@@ -20,7 +20,7 @@ Our API has a rate limit of max 30 requests a minute. If you exceed this limit, 
 
 * [News](/teamworktf/website_api/blob/master/NEWS.md)  *(news from various sources about Team Fortress 2)*
 * [Community Gameservers](/teamworktf/website_api/blob/master/COMMUNITY-QUICKPLAY.md) *(gameservers, gamemodes, providers and statistics about players)*
-* [Map thumbnails & Statisitics](#map-thumbnails--statistics) *(gamemap thumbnails, images and statistics about players)*
+* [Gamemap thumbnails & Statistics](#map-thumbnails--statistics) *(gamemap thumbnails, images and statistics about players)*
 
 Other information sources:
 
