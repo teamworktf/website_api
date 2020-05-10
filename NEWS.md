@@ -12,6 +12,8 @@ https://teamwork.tf/api/v1/news?key=YOUR_API_KEY
 
 Pagination is also supported, you can append `&page=2` to the URL to request older articles.
 
+Searching for specific news providers is also possible, you can append `&provider=NAME` to the URL to request only articles from this provider. For a list of all providers, please view the [news](https://teamwork.tf/news) page.
+
 Example result:
 ```json
 [
