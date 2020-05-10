@@ -4,7 +4,7 @@ Retrieve information about creators from Teamwork.tf. [Prerequistes for using th
 
 ## Find YouTube creator based on SteamID
 
-Search for a specific YouTube creator that is [listed on our website](https://teamwork.tf/creators/explore) based on their Steam ID64:
+Search for a specific YouTube creator that is [listed on our website](https://teamwork.tf/creators/explore) based on their SteamID64:
 
 ```
 https://teamwork.tf/api/v1/youtube-creator/steamid/{steamid}?key=YOUR_API_KEY
@@ -32,9 +32,9 @@ This endpoint can return multiple accounts, as multiple YouTube creator accounts
 ]
 ```
 
-## Find Gamemap creator based on SteamID
+## Get created gamemaps based on SteamID
 
-Search for a specific Gamemap creator that is listed on our website based on their Steam ID64:
+Get a list of created gamemaps based on their SteamID64. Note that this user does not have a "creator" account on the website, as this is focussed on a YouTube channel.
 
 ```
 https://teamwork.tf/api/v1/map-creator/steamid/{steamid}?key=YOUR_API_KEY
